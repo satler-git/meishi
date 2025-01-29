@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         run: |
-          pnpm ci
+          pnpm install --frozen-lockfile
           pnpm run build
 
       - name: Publish to Cloudflare Pages
