@@ -21,7 +21,9 @@ jobs:
       - uses: nicknovitski/nix-develop@v1
 
       - name: Build
-        run: pnpm run build
+        run: |
+          pnpm ci
+          pnpm run build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
