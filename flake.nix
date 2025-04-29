@@ -16,7 +16,9 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          wrangler
+          (wrangler.overrideAttrs {
+            dontCheckForBrokenSymlinks = true;
+          })
 
           pnpm
           pnpm-shell-completion
